@@ -1,69 +1,31 @@
-# React + TypeScript + Vite
+# Clear Architecture Todo App Example with React + Typescript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a sample app that I create follow the clean architecture principles applied to frontend, I have a full tutorial of this at [my YouTube channel](https://www.youtube.com/channel/UCikk0dXuvTMDVDmXVAhwAAw/) explining all the concepts that I applied to build this example, check it out if you are interested:
 
-Currently, two official plugins are available:
+Link to the playlist: [Clean Architecture with React Series](https://www.youtube.com/watch?v=1tiz9_AbmZ0&list=PL1-d6o0SXOR4ciPRz3q6G1tsxRAGqSVbz)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
 
-## Expanding the ESLint configuration
+To run this app, install the dependencies with yout favorite package manager:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```shell
+pnpm install # pnpm (my favorite)
+npm install # npm
+yarn install # yarn
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### JSON Server
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+This project use JSON Server to mock server API. To run JSON server go to the app directory and use the following command in your favorite package manager.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```shell
+# In app directory
+pnpm dlx json-server ./src/features/todos/infrastructure/json-server/db.json -
+p 8000 # pnpm
+npx json-server ./src/features/todos/infrastructure/json-server/db.json -
+p 8000 #npm
+yarn dlx json-server ./src/features/todos/infrastructure/json-server/db.json -
+p 8000 # yarn
 ```
+
+After that you can test the app.
