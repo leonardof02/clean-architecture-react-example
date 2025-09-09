@@ -2,7 +2,7 @@
 
 This is a sample app that I create follow the clean architecture principles applied to frontend, I have a full tutorial of this at [my YouTube channel](https://www.youtube.com/channel/UCikk0dXuvTMDVDmXVAhwAAw/) explining all the concepts that I applied to build this example, check it out if you are interested:
 
-Link to the playlist: ![Clean Architecture with React Series](https://www.youtube.com/watch?v=1tiz9_AbmZ0&list=PL1-d6o0SXOR4ciPRz3q6G1tsxRAGqSVbz)
+Link to the playlist: [Clean Architecture with React Series](https://www.youtube.com/watch?v=1tiz9_AbmZ0&list=PL1-d6o0SXOR4ciPRz3q6G1tsxRAGqSVbz)
 
 ## Installation
 
